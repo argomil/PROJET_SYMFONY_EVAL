@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes articles{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Liste des Articles</h1>
+    <div class="row">
+        {% for article in articles %}
+        <div class="col-md-4">
+            <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+                <h3 class="card-header">{{article.libelle}}</h3>
+                <img style="height:200px; width:100%, display:block;" src="{{article.image}}" alt="image">
+                <div class="card-body">
+                    <p class="card-text">{{article.description}}</p>
+                    <p> {{article.prix}} euros </p>
+                </div>
+                <div>
+                <a href="{{path('article_affiche', {'id' : article.id})}}" class="btn btn-success">Voir le détail</a>
+                </div>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

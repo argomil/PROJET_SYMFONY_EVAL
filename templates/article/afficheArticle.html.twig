@@ -5,19 +5,21 @@
 {% block body %}
 
 <div class="example-wrapper">
-<div class="text-center"><h1>Fiche Article n° {{article.id}}</h1></div>
-    
+    <div 
+        class="text-center"><h1>Fiche Article n° {{article.id}}</h1>
+    </div>
+        
     <div class="col">
-    
-    <div class="card text-white bg-primary mb-5 text-center">
-            <h3 class="card-header">{{article.libelle}}</h3>
-            <img style="height:100%; width:100%, display:block;" src="{{article.image}}" alt="image">
-            <div class="card-body">
-                <p class="card-text">{{article.description}}</p>
-                <p> {{article.prix}} euros </p>
-            </div>
+        
+        <div class="card text-white bg-primary mb-5 text-center">
+                    <h3 class="card-header">{{article.libelle}}</h3>
+                    <img style="height:100%; width:100%, display:block;" src="{{article.image}}" alt="image">
+                <div class="card-body">
+                        <p class="card-text">{{article.description}}</p>
+                        <p> {{article.prix}} euros </p>
+                </div>
         </div>  
-    
+        
     </div>
 </div>
 {% endblock %}
